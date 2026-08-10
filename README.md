@@ -1,9 +1,12 @@
+
 Code and results for a study comparing four strategies for integrating social
 determinants of health (SDOH) data into diabetes risk prediction models, with
 formal missing-data sensitivity analysis (complete-case vs. multiple imputation)
 and uncertainty quantification (DeLong tests, Rubin's-rules pooled confidence
 intervals, calibration diagnostics).
 
+**Manuscript:** [add citation/DOI once published]
+**Manuscript status:** in preparation for submission to *JAMIA*
 
 ## Key finding
 
@@ -21,8 +24,8 @@ risk reporting sampling noise as a substantive finding.
 ├── src/
 │   ├── run_pipeline.py       # End-to-end pipeline (merge → outcome → strategies → evaluation)
 │   └── stats_helpers.py      # Hand-implemented survey-weighted GLM, DeLong, Hosmer-Lemeshow, NRI
-├── notebooks/
-│   └── paper3_analysis.ipynb # Full annotated analysis, including ⚠️ cells for optional
+├── notebook/
+│   └── code.ipynb            # Full annotated analysis, including ⚠️ cells for optional
 │                              # cross-validation against statsmodels/samplics/shap
 ├── results/                  # Numeric outputs (JSON/CSV) from the published analysis
 ├── requirements.txt
@@ -57,7 +60,7 @@ see manuscript Limitations.
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/sdoh-integration-diabetes-nhanes.git
+git clone https://github.com/singhlamohit87/sdoh-integration-diabetes-nhanes.git
 cd sdoh-integration-diabetes-nhanes
 pip install -r requirements.txt
 ```
@@ -80,7 +83,7 @@ cd src
 python run_pipeline.py
 ```
 
-Or step through `notebooks/paper3_analysis.ipynb` for the fully annotated
+Or step through `notebook/code.ipynb` for the fully annotated
 version, including the missing-data sensitivity analysis (Section 8) and
 survey-variance cross-validation (Section 6a).
 
@@ -102,12 +105,14 @@ GLM (17 of 18 Strategy 1 coefficient SEs agreed within ~15%) and against
 `statsmodels`' MICE implementation for multiple imputation (matched within
 0.0002 AUC). See manuscript Methods for full validation details.
 
+## Citation
 
+If you use this code, please cite the manuscript [citation to be added upon
+publication] and this repository [Zenodo DOI to be added].
 
 ## License
 
 MIT License — see `LICENSE`.
 
-## Contact
 
-[Author name] — [contact info]
+
